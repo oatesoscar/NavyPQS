@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NavyPQS
@@ -12,6 +6,9 @@ namespace NavyPQS
     public partial class AdminPanel : Form
     {
         FileIO fileIO = new FileIO();
+        TextReadWrite textReadWrite = new TextReadWrite();
+        JsonReadWrite jsonReadWrite = new JsonReadWrite();
+
         public AdminPanel()
         {
             InitializeComponent();
@@ -23,34 +20,28 @@ namespace NavyPQS
             tTextFilePath.Text = fileIO.TxtFilePath;
         }
 
-        private void bOpenJsonFile_Click(object sender, EventArgs e)
-        {
-            fileIO.GetJsonFile();
-            tJsonFilePath.Text = fileIO.JsonFilePath;
-        }
-
         private void bSelectTxtFilePath_Click(object sender, EventArgs e)
         {
             fileIO.SetTextFilePath();
             tTextFilePath.Text = fileIO.TxtFilePath;
         }
 
-        private void bSelectJsonFilePath_Click(object sender, EventArgs e)
-        {
-            fileIO.SetJsonFilePath();
-            tJsonFilePath.Text = fileIO.JsonFilePath;
-        }
-
         private void bCancel_Click(object sender, EventArgs e)
         {
             fileIO.JsonFilePath = string.Empty;
             fileIO.TxtFilePath = string.Empty;
-            MessageBox.Show("Operation cancelled");            
+            MessageBox.Show("Operation cancelled","User Cancelled",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Application.Exit();
         }
 
         private void bComplete_Click(object sender, EventArgs e)
         {
-            
+            textReadWrite.CreateQuestionObjects(textReadWrite.readTextFile(fileIO.TxtFilePath));
+            jsonReadWrite.writeQuestionToJsonFile(textReadWrite.questionObjectList, fileIO.JsonFilePath);
+            MessageBox.Show("Operation Complete");
+            this.Hide();
+            Questions questions = new Questions();
+            questions.Show();
         }
     }
 }

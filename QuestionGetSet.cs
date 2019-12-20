@@ -5,7 +5,7 @@ using System.Linq;
 
 
 
-namespace QuestionCreator
+namespace NavyPQS
 {
     class QuestionGetSet
     {
@@ -28,9 +28,5 @@ namespace QuestionCreator
             JsonReadWrite.readQuestionsFromJsonFile(jsonFilePath);
         }
 
-        public void printJsonQuestionsSummary()
-        {
-            JsonReadWrite.printJsonQuestionsSummary();
-        }
     }
 }

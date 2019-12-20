@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
+using System.Security.AccessControl;
+using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace NavyPQS
@@ -9,7 +8,7 @@ namespace NavyPQS
     class FileIO
     {
         public string TxtFilePath { get; set; }
-        public string JsonFilePath { get; set; }
+        public string JsonFilePath { get; set; } = @"C:\Users\Oates Oscar\source\repos\NavyPQS\test.json";
 
         public void GetTextFile()
         {
@@ -55,7 +54,17 @@ namespace NavyPQS
             if (folderBrowser.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 JsonFilePath = folderBrowser.SelectedPath;
+                GrantAccess(JsonFilePath);
             }
+        }
+
+
+        private void GrantAccess(string fullPath)
+        {
+            DirectoryInfo dInfo = new DirectoryInfo(fullPath);
+            DirectorySecurity dSecurity = dInfo.GetAccessControl();
+            dSecurity.AddAccessRule(new FileSystemAccessRule(new SecurityIdentifier(WellKnownSidType.WorldSid, null), FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.NoPropagateInherit, AccessControlType.Allow));
+            dInfo.SetAccessControl(dSecurity);
         }
     }
 }
