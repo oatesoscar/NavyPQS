@@ -30,27 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tScore = new System.Windows.Forms.TextBox();
+            this.tUsername = new System.Windows.Forms.TextBox();
+            this.bMinimize = new System.Windows.Forms.Button();
+            this.bExit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tAnswerB = new System.Windows.Forms.TextBox();
             this.bPrevious = new System.Windows.Forms.Button();
             this.pPassFail = new System.Windows.Forms.PictureBox();
-            this.bExit = new System.Windows.Forms.Button();
             this.bNext = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tQuestion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tAnswerA = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.bMinimize = new System.Windows.Forms.Button();
+            this.tAnswerC = new System.Windows.Forms.TextBox();
             this.bA = new System.Windows.Forms.Button();
             this.bB = new System.Windows.Forms.Button();
             this.bC = new System.Windows.Forms.Button();
-            this.tAnswerA = new System.Windows.Forms.TextBox();
-            this.tAnswerB = new System.Windows.Forms.TextBox();
-            this.tAnswerC = new System.Windows.Forms.TextBox();
-            this.tUsername = new System.Windows.Forms.TextBox();
-            this.tScore = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tQuestion = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tScoreMultiplyer = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pPassFail)).BeginInit();
@@ -65,6 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.tScoreMultiplyer);
             this.panel1.Controls.Add(this.tScore);
             this.panel1.Controls.Add(this.tUsername);
             this.panel1.Controls.Add(this.bMinimize);
@@ -74,6 +76,70 @@
             this.panel1.Size = new System.Drawing.Size(911, 42);
             this.panel1.TabIndex = 0;
             // 
+            // tScore
+            // 
+            this.tScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tScore.Enabled = false;
+            this.tScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.tScore.Location = new System.Drawing.Point(426, 8);
+            this.tScore.Name = "tScore";
+            this.tScore.ReadOnly = true;
+            this.tScore.Size = new System.Drawing.Size(100, 26);
+            this.tScore.TabIndex = 3;
+            this.tScore.Text = "@Score";
+            // 
+            // tUsername
+            // 
+            this.tUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tUsername.Enabled = false;
+            this.tUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tUsername.Location = new System.Drawing.Point(244, 7);
+            this.tUsername.Name = "tUsername";
+            this.tUsername.ReadOnly = true;
+            this.tUsername.Size = new System.Drawing.Size(176, 27);
+            this.tUsername.TabIndex = 2;
+            this.tUsername.Text = "@UserName";
+            // 
+            // bMinimize
+            // 
+            this.bMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bMinimize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bMinimize.BackgroundImage = global::NavyPQS.Properties.Resources.minimizeNormal;
+            this.bMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bMinimize.Location = new System.Drawing.Point(826, 3);
+            this.bMinimize.Name = "bMinimize";
+            this.bMinimize.Size = new System.Drawing.Size(38, 36);
+            this.bMinimize.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.bMinimize, "Minimize");
+            this.bMinimize.UseVisualStyleBackColor = false;
+            this.bMinimize.Click += new System.EventHandler(this.AppMinimize);
+            this.bMinimize.MouseEnter += new System.EventHandler(this.SetMHicon);
+            this.bMinimize.MouseLeave += new System.EventHandler(this.SetMNicon);
+            // 
+            // bExit
+            // 
+            this.bExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bExit.BackgroundImage = global::NavyPQS.Properties.Resources.icons8_close_window_100;
+            this.bExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bExit.Location = new System.Drawing.Point(870, 3);
+            this.bExit.Name = "bExit";
+            this.bExit.Size = new System.Drawing.Size(38, 36);
+            this.bExit.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.bExit, "Close");
+            this.bExit.UseVisualStyleBackColor = false;
+            this.bExit.Click += new System.EventHandler(this.AppExit);
+            this.bExit.MouseEnter += new System.EventHandler(this.SetHighlightIcon);
+            this.bExit.MouseLeave += new System.EventHandler(this.SetNormalIcon);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tAnswerB);
@@ -81,6 +147,21 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(226, 238);
             this.panel4.TabIndex = 3;
+            // 
+            // tAnswerB
+            // 
+            this.tAnswerB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tAnswerB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tAnswerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tAnswerB.Enabled = false;
+            this.tAnswerB.Location = new System.Drawing.Point(3, 3);
+            this.tAnswerB.Multiline = true;
+            this.tAnswerB.Name = "tAnswerB";
+            this.tAnswerB.ReadOnly = true;
+            this.tAnswerB.Size = new System.Drawing.Size(220, 232);
+            this.tAnswerB.TabIndex = 1;
             // 
             // bPrevious
             // 
@@ -106,25 +187,6 @@
             this.pPassFail.TabIndex = 4;
             this.pPassFail.TabStop = false;
             this.toolTip1.SetToolTip(this.pPassFail, "Result");
-            // 
-            // bExit
-            // 
-            this.bExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bExit.BackgroundImage = global::NavyPQS.Properties.Resources.icons8_close_window_100;
-            this.bExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bExit.Location = new System.Drawing.Point(870, 3);
-            this.bExit.Name = "bExit";
-            this.bExit.Size = new System.Drawing.Size(38, 36);
-            this.bExit.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.bExit, "Close");
-            this.bExit.UseVisualStyleBackColor = false;
-            this.bExit.Click += new System.EventHandler(this.AppExit);
-            this.bExit.MouseEnter += new System.EventHandler(this.SetHighlightIcon);
-            this.bExit.MouseLeave += new System.EventHandler(this.SetNormalIcon);
             // 
             // bNext
             // 
@@ -158,6 +220,35 @@
             this.panel2.Size = new System.Drawing.Size(663, 46);
             this.panel2.TabIndex = 1;
             // 
+            // tQuestion
+            // 
+            this.tQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tQuestion.Enabled = false;
+            this.tQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.tQuestion.Location = new System.Drawing.Point(53, 14);
+            this.tQuestion.Name = "tQuestion";
+            this.tQuestion.ReadOnly = true;
+            this.tQuestion.Size = new System.Drawing.Size(586, 25);
+            this.tQuestion.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Q :";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tAnswerA);
@@ -165,6 +256,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(216, 238);
             this.panel3.TabIndex = 7;
+            // 
+            // tAnswerA
+            // 
+            this.tAnswerA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tAnswerA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tAnswerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tAnswerA.Enabled = false;
+            this.tAnswerA.Location = new System.Drawing.Point(0, 3);
+            this.tAnswerA.Multiline = true;
+            this.tAnswerA.Name = "tAnswerA";
+            this.tAnswerA.ReadOnly = true;
+            this.tAnswerA.Size = new System.Drawing.Size(213, 232);
+            this.tAnswerA.TabIndex = 0;
             // 
             // panel5
             // 
@@ -174,24 +280,20 @@
             this.panel5.Size = new System.Drawing.Size(222, 238);
             this.panel5.TabIndex = 4;
             // 
-            // bMinimize
+            // tAnswerC
             // 
-            this.bMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tAnswerC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bMinimize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bMinimize.BackgroundImage = global::NavyPQS.Properties.Resources.minimizeNormal;
-            this.bMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bMinimize.Location = new System.Drawing.Point(826, 3);
-            this.bMinimize.Name = "bMinimize";
-            this.bMinimize.Size = new System.Drawing.Size(38, 36);
-            this.bMinimize.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.bMinimize, "Minimize");
-            this.bMinimize.UseVisualStyleBackColor = false;
-            this.bMinimize.Click += new System.EventHandler(this.AppMinimize);
-            this.bMinimize.MouseEnter += new System.EventHandler(this.SetMHicon);
-            this.bMinimize.MouseLeave += new System.EventHandler(this.SetMNicon);
+            this.tAnswerC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tAnswerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tAnswerC.Enabled = false;
+            this.tAnswerC.Location = new System.Drawing.Point(3, 3);
+            this.tAnswerC.Multiline = true;
+            this.tAnswerC.Name = "tAnswerC";
+            this.tAnswerC.ReadOnly = true;
+            this.tAnswerC.Size = new System.Drawing.Size(215, 232);
+            this.tAnswerC.TabIndex = 1;
             // 
             // bA
             // 
@@ -220,105 +322,18 @@
             this.bC.Text = "C";
             this.bC.UseVisualStyleBackColor = true;
             // 
-            // tAnswerA
+            // tScoreMultiplyer
             // 
-            this.tAnswerA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tAnswerA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tAnswerA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tAnswerA.Enabled = false;
-            this.tAnswerA.Location = new System.Drawing.Point(0, 3);
-            this.tAnswerA.Multiline = true;
-            this.tAnswerA.Name = "tAnswerA";
-            this.tAnswerA.ReadOnly = true;
-            this.tAnswerA.Size = new System.Drawing.Size(213, 232);
-            this.tAnswerA.TabIndex = 0;
-            // 
-            // tAnswerB
-            // 
-            this.tAnswerB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tAnswerB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tAnswerB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tAnswerB.Enabled = false;
-            this.tAnswerB.Location = new System.Drawing.Point(3, 3);
-            this.tAnswerB.Multiline = true;
-            this.tAnswerB.Name = "tAnswerB";
-            this.tAnswerB.ReadOnly = true;
-            this.tAnswerB.Size = new System.Drawing.Size(220, 232);
-            this.tAnswerB.TabIndex = 1;
-            // 
-            // tAnswerC
-            // 
-            this.tAnswerC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tAnswerC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tAnswerC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tAnswerC.Enabled = false;
-            this.tAnswerC.Location = new System.Drawing.Point(3, 3);
-            this.tAnswerC.Multiline = true;
-            this.tAnswerC.Name = "tAnswerC";
-            this.tAnswerC.ReadOnly = true;
-            this.tAnswerC.Size = new System.Drawing.Size(215, 232);
-            this.tAnswerC.TabIndex = 1;
-            // 
-            // tUsername
-            // 
-            this.tUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tUsername.Enabled = false;
-            this.tUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tUsername.Location = new System.Drawing.Point(328, 7);
-            this.tUsername.Name = "tUsername";
-            this.tUsername.ReadOnly = true;
-            this.tUsername.Size = new System.Drawing.Size(176, 27);
-            this.tUsername.TabIndex = 2;
-            this.tUsername.Text = "@UserName";
-            // 
-            // tScore
-            // 
-            this.tScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tScore.Enabled = false;
-            this.tScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.tScore.Location = new System.Drawing.Point(510, 7);
-            this.tScore.Name = "tScore";
-            this.tScore.ReadOnly = true;
-            this.tScore.Size = new System.Drawing.Size(100, 26);
-            this.tScore.TabIndex = 3;
-            this.tScore.Text = "@Score";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Q :";
-            // 
-            // tQuestion
-            // 
-            this.tQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tQuestion.Enabled = false;
-            this.tQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.tQuestion.Location = new System.Drawing.Point(53, 14);
-            this.tQuestion.Name = "tQuestion";
-            this.tQuestion.ReadOnly = true;
-            this.tQuestion.Size = new System.Drawing.Size(586, 25);
-            this.tQuestion.TabIndex = 2;
+            this.tScoreMultiplyer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tScoreMultiplyer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tScoreMultiplyer.Enabled = false;
+            this.tScoreMultiplyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.tScoreMultiplyer.Location = new System.Drawing.Point(565, 8);
+            this.tScoreMultiplyer.Name = "tScoreMultiplyer";
+            this.tScoreMultiplyer.ReadOnly = true;
+            this.tScoreMultiplyer.Size = new System.Drawing.Size(100, 26);
+            this.tScoreMultiplyer.TabIndex = 4;
+            this.tScoreMultiplyer.Text = "@ScoreMultipliyer";
             // 
             // Questions
             // 
@@ -381,6 +396,7 @@
         private System.Windows.Forms.TextBox tQuestion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox tScoreMultiplyer;
     }
 }
 

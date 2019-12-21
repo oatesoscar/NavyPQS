@@ -9,7 +9,7 @@ namespace NavyPQS
     {
         public List<QuestionSkeleton> questionObjectList = new List<QuestionSkeleton>();
                
-        protected private int index = 0;
+        private int index = 0;
 
         public string[] readTextFile(string txtFilePath)
         {

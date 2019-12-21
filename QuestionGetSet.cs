@@ -20,12 +20,12 @@ namespace NavyPQS
 
         public void StoreQuestionObjectsToJsonFile(string jsonFilePath)
         {
-            JsonReadWrite.writeQuestionToJsonFile(TextReadWrite.questionObjectList, jsonFilePath);
+            JsonReadWrite.writeQuestions(TextReadWrite.questionObjectList, jsonFilePath);
         }
 
         public void GetAndStoreQuestionsFromJsonFile(string jsonFilePath)
         {
-            JsonReadWrite.readQuestionsFromJsonFile(jsonFilePath);
+            JsonReadWrite.readQuestions(jsonFilePath);
         }
 
     }
