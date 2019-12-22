@@ -17,7 +17,7 @@ namespace NavyPQS
             File.WriteAllText(jsonFilePath, jsonResult);
         }
         // Reads Questions from Questions.json
-        // Returns a list of questions.
+        // Returns a list of allQuestions.
         public List<QuestionSkeleton> readQuestions()
         {
             string jsonFile = File.ReadAllText(fileIO.JsonQuestions);

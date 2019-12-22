@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tScoreMultiplyer = new System.Windows.Forms.TextBox();
             this.tScore = new System.Windows.Forms.TextBox();
             this.tUsername = new System.Windows.Forms.TextBox();
             this.bMinimize = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.bB = new System.Windows.Forms.Button();
             this.bC = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tScoreMultiplyer = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pPassFail)).BeginInit();
@@ -75,6 +75,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(911, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // tScoreMultiplyer
+            // 
+            this.tScoreMultiplyer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tScoreMultiplyer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tScoreMultiplyer.Enabled = false;
+            this.tScoreMultiplyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.tScoreMultiplyer.Location = new System.Drawing.Point(565, 8);
+            this.tScoreMultiplyer.Name = "tScoreMultiplyer";
+            this.tScoreMultiplyer.ReadOnly = true;
+            this.tScoreMultiplyer.Size = new System.Drawing.Size(100, 26);
+            this.tScoreMultiplyer.TabIndex = 4;
+            this.tScoreMultiplyer.Text = "@ScoreMultipliyer";
             // 
             // tScore
             // 
@@ -175,6 +188,7 @@
             this.bPrevious.Text = " ";
             this.toolTip1.SetToolTip(this.bPrevious, "Previous Question");
             this.bPrevious.UseVisualStyleBackColor = true;
+            this.bPrevious.Click += new System.EventHandler(this.bPrevious_Click);
             // 
             // pPassFail
             // 
@@ -199,6 +213,7 @@
             this.bNext.TabIndex = 6;
             this.toolTip1.SetToolTip(this.bNext, "Next Question");
             this.bNext.UseVisualStyleBackColor = true;
+            this.bNext.Click += new System.EventHandler(this.bNext_Click);
             // 
             // button2
             // 
@@ -303,6 +318,7 @@
             this.bA.TabIndex = 8;
             this.bA.Text = "A";
             this.bA.UseVisualStyleBackColor = true;
+            this.bA.Click += new System.EventHandler(this.bA_Click);
             // 
             // bB
             // 
@@ -312,6 +328,7 @@
             this.bB.TabIndex = 9;
             this.bB.Text = "B";
             this.bB.UseVisualStyleBackColor = true;
+            this.bB.Click += new System.EventHandler(this.bB_Click);
             // 
             // bC
             // 
@@ -321,19 +338,7 @@
             this.bC.TabIndex = 10;
             this.bC.Text = "C";
             this.bC.UseVisualStyleBackColor = true;
-            // 
-            // tScoreMultiplyer
-            // 
-            this.tScoreMultiplyer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.tScoreMultiplyer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tScoreMultiplyer.Enabled = false;
-            this.tScoreMultiplyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.tScoreMultiplyer.Location = new System.Drawing.Point(565, 8);
-            this.tScoreMultiplyer.Name = "tScoreMultiplyer";
-            this.tScoreMultiplyer.ReadOnly = true;
-            this.tScoreMultiplyer.Size = new System.Drawing.Size(100, 26);
-            this.tScoreMultiplyer.TabIndex = 4;
-            this.tScoreMultiplyer.Text = "@ScoreMultipliyer";
+            this.bC.Click += new System.EventHandler(this.bC_Click);
             // 
             // Questions
             // 

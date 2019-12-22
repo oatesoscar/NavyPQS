@@ -3,6 +3,7 @@
     "classID": "1",
     "questionNumber": "1",
     "question": "Define the mission of the Navy",
+    "correctAnswer": "1",
     "answer1": "The mission of the Navy is to maintain, train and equip combat-ready Naval forces capable of winning wars, deterring aggression and maintaining freedom of the seas.",
     "answer2": "The mission of the Navy is to deploy, fight and win our nation’s wars by providing ready, prompt and sustained land dominance by Army forces across the full spectrum of conflict as part of the joint force. The Army mission is vital to the nation because we are the service capable of defeating enemy ground forces and indefinitely seizing and controlling those things an adversary prizes most – its land, its resources and its population.",
     "answer3": "The mission of the Navy is fly, fight and win in air, space and cyberspace. Our rich history and our vision guide our Airmen as we pursue our mission with excellence and integrity to become leaders, innovators and warriors."
@@ -11,6 +12,7 @@
     "classID": "1",
     "questionNumber": "2",
     "question": "Recite the eleven general orders of a sentry.",
+    "correctAnswer": "1",
     "answer1": "To take charge of this post and all government property in view.To walk my post in a military manner, keeping always on the alert, and observing everything that takes place within sight or hearing.To report all violations of orders I am instructed to enforce.To repeat all calls from posts more distant from the guard house than my own.To quit my post only when properly relieved.To receive, obey and pass on to the sentry who relieves me, all orders from the Commanding Officer, Command Duty Officer, Officer of the Deck, and Officers and Petty Officers of the Watch only.To talk to no one except in the line of duty.To give the alarm in case of fire or disorder.To call the Officer of the Deck in any case not covered by instructions.To salute all officers and all colors and standards not cased.To be especially watchful at night, and, during the time for challenging, to challenge all persons on or near my post and to allow no one to pass without proper authority.",
     "answer2": "I will guard everything within the limits of my post and quit my post only when properly relieved.I will obey my special orders and perform all of my duties in a military manner.I will report violations of my special orders, emergencies, and anything not covered in my instructions to the commander of the relief.",
     "answer3": "it worked."
@@ -19,6 +21,7 @@
     "classID": "1",
     "questionNumber": "3",
     "question": "Recite the Sailor’s Creed.",
+    "correctAnswer": "3",
     "answer1": "I am a United States Sailor.I will support and defend the Constitution of the United States of Americaand I will obey the orders of those appointed over me.I represent the fighting spirit of the Navy and those who have gone before meto defend freedom and democracy around the world.I proudly serve my country's Navy combat team with Honor, Courage and Commitment.I am committed to excellence and the fair treatment of all.",
     "answer2": "I am a United States Sailor.I am a warrior and a member of a team.I serve the people of the United States, and live the Army Values.I will always place the mission first.I will never accept defeat.I will never quit.I will never leave a fallen comrade.I am disciplined, physically and mentally tough, trained and proficient in my warrior tasks and drills.I always maintain my arms, my equipment and myself.I am an expert and I am a professional.I stand ready to deploy, engage, and destroy, the enemies of the United States of America in close combat.I am a guardian of freedom and the American way of life.I am an American Soldier.",
     "answer3": "I am a United States Sailor.I AM A WARRIOR.I HAVE ANSWERED MY NATION’S CALL.I AM AN AMERICAN AIRMAN.MY MISSION IS TO FLY, FIGHT, AND WIN.I AM FAITHFUL TO A PROUD HERITAGE,A TRADITION OF HONOR,AND A LEGACY OF VALOR.I AM AN AMERICAN AIRMAN,GUARDIAN OF FREEDOM AND JUSTICE,MY NATION’S SWORD AND SHIELD,ITS SENTRY AND AVENGER.I DEFEND MY COUNTRY WITH MY LIFE.I AM AN AMERICAN AIRMAN:WINGMAN, LEADER, WARRIOR.I WILL NEVER LEAVE AN AIRMAN BEHIND,I WILL NEVER FALTER,AND I WILL NOT FAIL."
@@ -27,6 +30,7 @@
     "classID": "1",
     "questionNumber": "4",
     "question": "Recite the RTC Maxim",
+    "correctAnswer": "1",
     "answer1": "I will not lie, cheat, or steal nor tolerate those among us who do.",
     "answer2": "I will not cheat, lie, or steal nor tolerate those among us who do.",
     "answer3": "I will not steal, cheat, or lie nor tolerate those among us who do."

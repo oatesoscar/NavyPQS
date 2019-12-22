@@ -11,6 +11,7 @@ namespace NavyPQS
         public string classID { get; set; }
         public string questionNumber { get; set; }
         public string question { get; set; }
+        public string correctAnswer { get; set; }
         public string answer1 { get; set; }
         public string answer2 { get; set; }
         public string answer3 { get; set; }

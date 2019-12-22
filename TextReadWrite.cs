@@ -35,6 +35,8 @@ namespace NavyPQS
                     index++;
                     Question.question = questionsText[index];
                     index++;
+                    Question.correctAnswer = questionsText[index];
+                    index++;
                     Question.answer1 = questionsText[index];
                     index++;
                     Question.answer2 = questionsText[index];
@@ -44,7 +46,7 @@ namespace NavyPQS
                     questionObjectList.Add(Question);
                     Console.WriteLine($"Question number {Question.questionNumber} under Class ID: {Question.classID} has been stored as an object");
                 }
-                Console.WriteLine($"number of questions stored as objects = {questionObjectList.Count}");
+                Console.WriteLine($"number of allQuestions stored as objects = {questionObjectList.Count}");
             }
             catch (Exception)
             {
