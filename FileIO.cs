@@ -7,8 +7,10 @@ namespace NavyPQS
 {
     class FileIO
     {
-        public string TxtFilePath { get; set; }
-        public string JsonFilePath { get; set; } = @"C:\Users\Oates Oscar\source\repos\NavyPQS\test.json";
+        public string TxtPath { get; set; }
+        public string JsonQuestions { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\Questions.json";
+        public string UserFileJson { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\Users.json";
+        public string DefaultUserJson { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\Default.json";
 
         public void GetTextFile()
         {
@@ -21,7 +23,7 @@ namespace NavyPQS
 
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                TxtFilePath = openFile.FileName;
+                TxtPath = openFile.FileName;
             }
         }
 
@@ -30,7 +32,7 @@ namespace NavyPQS
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
             if (folderBrowser.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                TxtFilePath = folderBrowser.SelectedPath;
+                TxtPath = folderBrowser.SelectedPath;
             }
         }
 
@@ -44,7 +46,7 @@ namespace NavyPQS
 
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                JsonFilePath = openFile.FileName;
+                JsonQuestions = openFile.FileName;
             }
         }
 
@@ -53,18 +55,18 @@ namespace NavyPQS
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
             if (folderBrowser.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                JsonFilePath = folderBrowser.SelectedPath;
-                GrantAccess(JsonFilePath);
+                JsonQuestions = folderBrowser.SelectedPath;
+                //GrantAccess(JsonFilePath);
             }
         }
 
-
-        private void GrantAccess(string fullPath)
+        /*private void GrantAccess(string fullPath)
         {
             DirectoryInfo dInfo = new DirectoryInfo(fullPath);
             DirectorySecurity dSecurity = dInfo.GetAccessControl();
             dSecurity.AddAccessRule(new FileSystemAccessRule(new SecurityIdentifier(WellKnownSidType.WorldSid, null), FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.NoPropagateInherit, AccessControlType.Allow));
             dInfo.SetAccessControl(dSecurity);
         }
+        */
     }
 }

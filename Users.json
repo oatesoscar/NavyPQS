@@ -1,12 +1,5 @@
 [
   {
-    "userName": "dadfa",
-    "password": "adfadf",
-    "score": 0,
-    "lastscoreMultiplyer": 0,
-    "currentScoreMultiplyer": 0
-  },
-  {
     "userName": "",
     "password": "",
     "score": 0,
@@ -14,8 +7,15 @@
     "currentScoreMultiplyer": 0
   },
   {
-    "userName": "gsfg",
-    "password": "sfgsf",
+    "userName": "Ibra",
+    "password": "Fal",
+    "score": 0,
+    "lastscoreMultiplyer": 0,
+    "currentScoreMultiplyer": 0
+  },
+  {
+    "userName": "ibra",
+    "password": "fal",
     "score": 0,
     "lastscoreMultiplyer": 0,
     "currentScoreMultiplyer": 0

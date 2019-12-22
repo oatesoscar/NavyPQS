@@ -13,35 +13,29 @@ namespace NavyPQS
         {
             InitializeComponent();
         }
-
         private void bOpenTxtFile_Click(object sender, EventArgs e)
         {
             fileIO.GetTextFile();
-            tTextFilePath.Text = fileIO.TxtFilePath;
+            tTextFilePath.Text = fileIO.TxtPath;
         }
-
         private void bSelectTxtFilePath_Click(object sender, EventArgs e)
         {
             fileIO.SetTextFilePath();
-            tTextFilePath.Text = fileIO.TxtFilePath;
+            tTextFilePath.Text = fileIO.TxtPath;
         }
-
         private void bCancel_Click(object sender, EventArgs e)
         {
-            fileIO.JsonFilePath = string.Empty;
-            fileIO.TxtFilePath = string.Empty;
+            fileIO.JsonQuestions = string.Empty;
+            fileIO.TxtPath = string.Empty;
             MessageBox.Show("Operation cancelled","User Cancelled",MessageBoxButtons.OK, MessageBoxIcon.Error);
             Application.Exit();
         }
-
         private void bComplete_Click(object sender, EventArgs e)
         {
-            textReadWrite.CreateQuestionObjects(textReadWrite.readTextFile(fileIO.TxtFilePath));
-            jsonReadWrite.writeQuestions(textReadWrite.questionObjectList, fileIO.JsonFilePath);
+            textReadWrite.CreateQuestionObjects(textReadWrite.readTextFile(fileIO.TxtPath));
+            jsonReadWrite.writeQuestions(textReadWrite.questionObjectList, fileIO.JsonQuestions);
             MessageBox.Show("Operation Complete");
-            this.Hide();
-            Questions questions = new Questions();
-            questions.Show();
+            Application.Exit();
         }
     }
 }

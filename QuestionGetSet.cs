@@ -10,23 +10,19 @@ namespace NavyPQS
     class QuestionGetSet
     {
         JsonReadWrite JsonReadWrite = new JsonReadWrite();
-        TextReadWrite TextReadWrite = new TextReadWrite();
-       
-        public void GetAndStoreQuestionsFromTextFile(string txtFilePath)
+        TextReadWrite TextReadWrite = new TextReadWrite();      
+        public void GetAndStoreTextQuestions(string txtFilePath)
         {
             var questionsText = TextReadWrite.readTextFile(txtFilePath);
             TextReadWrite.CreateQuestionObjects(questionsText);
         }
-
-        public void StoreQuestionObjectsToJsonFile(string jsonFilePath)
+        public void StoreQuestionObjectsToJson(string jsonFilePath)
         {
             JsonReadWrite.writeQuestions(TextReadWrite.questionObjectList, jsonFilePath);
         }
-
-        public void GetAndStoreQuestionsFromJsonFile(string jsonFilePath)
+        public void GetAndStoreJsonQuestions(string jsonFilePath)
         {
-            JsonReadWrite.readQuestions(jsonFilePath);
+            JsonReadWrite.readQuestions();
         }
-
     }
 }

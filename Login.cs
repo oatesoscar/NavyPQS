@@ -13,7 +13,8 @@ namespace NavyPQS
     {
         private bool mouseDown;
         private Point lastLocation;
-        bool isOK = false;
+        private bool isOK;
+        User User = new User();
 
         public Login()
         {
@@ -57,7 +58,20 @@ namespace NavyPQS
             CheckFields();
             if (isOK)
             {
-                var user = FindUser();
+                FindUser();
+            }
+        }
+
+        private void bSignUp_Click(object sender, EventArgs e)
+        {
+            CheckFields();
+            if (isOK == true)
+            {
+                CreateUser();
+                isOK = false;
+                this.Hide();
+                Questions questions = new Questions(User.userName);
+                questions.Show();
             }
         }
 
@@ -73,22 +87,20 @@ namespace NavyPQS
                 };
                 JsonReadWrite jsonReadWrite = new JsonReadWrite();
                 jsonReadWrite.AddUser(user);
-                this.Hide();
-                Questions questions = new Questions();
-                questions.Show();
+                User = user;
             }
         }
 
-        private User FindUser()
+        private void FindUser()
         {
             JsonReadWrite jsonReadWrite = new JsonReadWrite();
             var UserList = jsonReadWrite.ReadUsers();
             var user = UserList.Find(r => r.userName == tUserName.Text);
             if (user == null)
             {
-                MessageBox.Show("this user doesn't exist... Create one instead");
-                this.Show();
                 isOK = false;
+                MessageBox.Show("this user doesn't exist... Create one instead");
+                this.Show();                
             }
             else if (tPassword.Text != user.password)
             {
@@ -96,7 +108,14 @@ namespace NavyPQS
                 this.Show();
                 isOK = false;
             }
-            return user;
+            else
+            {
+                User = user;
+                Questions questions = new Questions(User.userName);
+                this.Hide();
+                questions.Show();
+            }
+            
         }
 
         private void CheckFields()
@@ -125,16 +144,8 @@ namespace NavyPQS
             {
                  isOK = true;
             }
-
         }
 
-        private void bSignUp_Click(object sender, EventArgs e)
-        {
-            CheckFields();
-            if (isOK == true)
-            {
-                CreateUser();
-            }
-        }
+ 
     }
 }
