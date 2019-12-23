@@ -12,7 +12,6 @@ namespace NavyPQS
     public partial class Questions : Form
     {
         private User CurrentUser = new User();
-        private JsonReadWrite JsonReadWrite = new JsonReadWrite();
         private List<QuestionSkeleton> allQuestions = new List<QuestionSkeleton>();
         private Random random = new Random();
         private QuestionSkeleton question = new QuestionSkeleton();
@@ -23,6 +22,7 @@ namespace NavyPQS
         private int scoreMultipliyer = 1;
         private bool failedOnce;
         private bool noMoreQuestions;
+        private bool scoreStored;
 
         public Questions(string str)
         {
@@ -32,6 +32,7 @@ namespace NavyPQS
             CurrentUser = GetUser(str);
             tUsername.Text = CurrentUser.userName;
             tScore.Text = CurrentUser.score.ToString();
+            tLastScore.Text = CurrentUser.lastScore.ToString();
             tScoreMultiplyer.Text = CurrentUser.currentScoreMultiplyer.ToString();
             questionNumber = random.Next(0, allQuestions.Count());
             noMoreQuestions = false;
@@ -75,7 +76,15 @@ namespace NavyPQS
             }
             else
             {
-                MessageBox.Show("No More questions");
+                if (scoreStored == true)
+                {
+                    MessageBox.Show("No More questions");
+                }
+                else
+                {
+                    MessageBox.Show("No More questions");
+                    SaveUserScore();
+                }              
             }
         }
 
@@ -87,7 +96,15 @@ namespace NavyPQS
             }
             else
             {
-                MessageBox.Show("No More questions");
+                if (scoreStored == true)
+                {
+                    MessageBox.Show("No More questions");
+                }
+                else
+                {
+                    MessageBox.Show("No More questions");
+                    SaveUserScore();
+                }
             }    
         }
 
@@ -136,7 +153,15 @@ namespace NavyPQS
             }
             else
             {
-                MessageBox.Show("No more questions");
+                if (scoreStored == true)
+                {
+                    MessageBox.Show("No More questions");
+                }
+                else
+                {
+                    MessageBox.Show("No More questions");
+                    SaveUserScore();
+                }
             }
 
         }
@@ -149,9 +174,25 @@ namespace NavyPQS
             return user;
         }
 
+        private void SaveUserScore()
+        {
+            JsonReadWrite jsonReadWrite = new JsonReadWrite();
+            List<User> users = new List<User>();
+            users = jsonReadWrite.ReadUsers();
+            //var user = users.Find(r => r.userName == CurrentUser.userName);
+            users.RemoveAll(r => r.userName == CurrentUser.userName);
+            jsonReadWrite.EmptyJsonFile();
+            CurrentUser.lastScore = CurrentUser.score;
+            CurrentUser.score = 0;
+            users.Add(CurrentUser);
+            jsonReadWrite.WriteUsers(users);
+            scoreStored = true;
+        }
+
         private void GetQuestions()
         {
-            allQuestions = JsonReadWrite.readQuestions();
+            JsonReadWrite jsonReadWrite = new JsonReadWrite();
+            allQuestions = jsonReadWrite.readQuestions();
         }
 
         private void SetQuestion()

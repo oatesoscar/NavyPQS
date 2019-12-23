@@ -15,12 +15,10 @@ namespace NavyPQS
         public string answer1 { get; set; }
         public string answer2 { get; set; }
         public string answer3 { get; set; }
-
         public string GetSummary()
         {
             string summary = $"{classID} , {questionNumber} , {question} ,";
             return summary;
         }
     }
-
 }

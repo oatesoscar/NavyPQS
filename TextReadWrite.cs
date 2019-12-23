@@ -7,11 +7,9 @@ namespace NavyPQS
 {
     class TextReadWrite
     {
-        public List<QuestionSkeleton> questionObjectList = new List<QuestionSkeleton>();
-               
+        public List<QuestionSkeleton> questionObjectList = new List<QuestionSkeleton>();             
         private int index = 0;
-
-        public string[] readTextFile(string txtFilePath)
+        public string[] ReadTextFile(string txtFilePath)
         {
             string text = System.IO.File.ReadAllText(txtFilePath);
             text = text.Replace("\r\n", string.Empty);
@@ -20,7 +18,6 @@ namespace NavyPQS
             var questions = textSplit.Where(c => c != "").ToArray();
             return questions;
         }
-
         public void CreateQuestionObjects(string[] questionsText)
         {
             try

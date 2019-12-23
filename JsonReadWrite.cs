@@ -43,5 +43,16 @@ namespace NavyPQS
             string jsonResult = JsonConvert.SerializeObject(jsonList, Formatting.Indented);
             File.WriteAllText(fileIO.UserFileJson, jsonResult);
         }
+
+        public void  WriteUsers(List<User> jsonList)
+        {
+            string jsonResult = JsonConvert.SerializeObject(jsonList, Formatting.Indented);
+            File.WriteAllText(fileIO.UserFileJson, jsonResult);
+        }
+
+        public void EmptyJsonFile()
+        {
+            File.WriteAllText(fileIO.UserFileJson, "");
+        }
     }
 }

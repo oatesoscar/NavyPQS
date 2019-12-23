@@ -52,6 +52,7 @@
             this.bB = new System.Windows.Forms.Button();
             this.bC = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tLastScore = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pPassFail)).BeginInit();
@@ -66,6 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.tLastScore);
             this.panel1.Controls.Add(this.tScoreMultiplyer);
             this.panel1.Controls.Add(this.tScore);
             this.panel1.Controls.Add(this.tUsername);
@@ -82,7 +84,7 @@
             this.tScoreMultiplyer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tScoreMultiplyer.Enabled = false;
             this.tScoreMultiplyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.tScoreMultiplyer.Location = new System.Drawing.Point(565, 8);
+            this.tScoreMultiplyer.Location = new System.Drawing.Point(481, 8);
             this.tScoreMultiplyer.Name = "tScoreMultiplyer";
             this.tScoreMultiplyer.ReadOnly = true;
             this.tScoreMultiplyer.Size = new System.Drawing.Size(100, 26);
@@ -95,7 +97,7 @@
             this.tScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tScore.Enabled = false;
             this.tScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.tScore.Location = new System.Drawing.Point(426, 8);
+            this.tScore.Location = new System.Drawing.Point(349, 8);
             this.tScore.Name = "tScore";
             this.tScore.ReadOnly = true;
             this.tScore.Size = new System.Drawing.Size(100, 26);
@@ -108,7 +110,7 @@
             this.tUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tUsername.Enabled = false;
             this.tUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tUsername.Location = new System.Drawing.Point(244, 7);
+            this.tUsername.Location = new System.Drawing.Point(164, 7);
             this.tUsername.Name = "tUsername";
             this.tUsername.ReadOnly = true;
             this.tUsername.Size = new System.Drawing.Size(176, 27);
@@ -340,6 +342,19 @@
             this.bC.UseVisualStyleBackColor = true;
             this.bC.Click += new System.EventHandler(this.bC_Click);
             // 
+            // tLastScore
+            // 
+            this.tLastScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.tLastScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tLastScore.Enabled = false;
+            this.tLastScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.tLastScore.Location = new System.Drawing.Point(625, 7);
+            this.tLastScore.Name = "tLastScore";
+            this.tLastScore.ReadOnly = true;
+            this.tLastScore.Size = new System.Drawing.Size(100, 26);
+            this.tLastScore.TabIndex = 5;
+            this.tLastScore.Text = "lastscore";
+            // 
             // Questions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +417,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox tScoreMultiplyer;
+        private System.Windows.Forms.TextBox tLastScore;
     }
 }
 

@@ -1,22 +1,28 @@
 [
   {
-    "userName": "",
-    "password": "",
-    "score": 0,
-    "lastscoreMultiplyer": 0,
-    "currentScoreMultiplyer": 0
-  },
-  {
-    "userName": "Ibra",
-    "password": "Fal",
-    "score": 0,
-    "lastscoreMultiplyer": 0,
-    "currentScoreMultiplyer": 0
-  },
-  {
+    "isAdmin": false,
     "userName": "ibra",
     "password": "fal",
     "score": 0,
+    "lastScore": 2200,
+    "lastscoreMultiplyer": 0,
+    "currentScoreMultiplyer": 0
+  },
+  {
+    "isAdmin": false,
+    "userName": "danielle",
+    "password": "Bisous",
+    "score": 0,
+    "lastScore": 0,
+    "lastscoreMultiplyer": 0,
+    "currentScoreMultiplyer": 0
+  },
+  {
+    "isAdmin": false,
+    "userName": "moneyman22",
+    "password": "providence22",
+    "score": 0,
+    "lastScore": -700,
     "lastscoreMultiplyer": 0,
     "currentScoreMultiplyer": 0
   }

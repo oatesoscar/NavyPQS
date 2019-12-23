@@ -80,14 +80,30 @@ namespace NavyPQS
             CheckFields();
             if (isOK == true)
             {
-                User user = new User()
+                if (tUserName.Text == "Admin" || tUserName.Text == "admin")
                 {
-                    userName = tUserName.Text,
-                    password = tPassword.Text
-                };
-                JsonReadWrite jsonReadWrite = new JsonReadWrite();
-                jsonReadWrite.AddUser(user);
-                User = user;
+                    User user = new User()
+                    {
+                        userName = tUserName.Text,
+                        password = tPassword.Text,
+                        isAdmin = true
+                    };
+                    JsonReadWrite jsonReadWrite = new JsonReadWrite();
+                    jsonReadWrite.AddUser(user);
+                    User = user;
+                }
+                else
+                {
+                    User user = new User()
+                    {
+                        userName = tUserName.Text,
+                        password = tPassword.Text,
+                    };
+                    JsonReadWrite jsonReadWrite = new JsonReadWrite();
+                    jsonReadWrite.AddUser(user);
+                    User = user;
+                }
+
             }
         }
 
@@ -111,9 +127,19 @@ namespace NavyPQS
             else
             {
                 User = user;
-                Questions questions = new Questions(User.userName);
-                this.Hide();
-                questions.Show();
+                if (User.isAdmin == true)
+                {
+                    AdminPanel adminPanel = new AdminPanel();
+                    this.Hide();
+                    adminPanel.Show();
+                }
+                else
+                {
+                    Questions questions = new Questions(User.userName);
+                    this.Hide();
+                    questions.Show();
+                }
+
             }
             
         }
@@ -126,7 +152,6 @@ namespace NavyPQS
                 MessageBox.Show("Enter UserName naa");
                 this.Show();
                 isOK = false;
-
             }
             else if (tPassword.Text == string.Empty)
             {

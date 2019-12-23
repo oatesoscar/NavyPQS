@@ -7,10 +7,10 @@ namespace NavyPQS
 {
     class FileIO
     {
-        public string TxtPath { get; set; } = @"C:\Users\Oates Oscar\source\repos\NavyPQS\QuestionText.txt";
-        public string JsonQuestions { get; set; } = @"C:\Users\Oates Oscar\source\repos\NavyPQS\Questions.json";
-        public string UserFileJson { get; set; } = @"C:\Users\Oates Oscar\source\repos\NavyPQS\Users.json";
-        public string DefaultUserJson { get; set; } = @"C:\Users\Oates Oscar\source\repos\NavyPQS\Default.json";
+        public string TxtPath { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\QuestionText.txt";
+        public string JsonQuestions { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\Questions.json";
+        public string UserFileJson { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\Users.json";
+        public string DefaultUserJson { get; set; } = @"C:\Users\HomicidalMAdMan\Documents\GitHub\NavyPQS\Default.json";
 
         public void GetTextFile()
         {

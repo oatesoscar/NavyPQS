@@ -32,7 +32,7 @@ namespace NavyPQS
         }
         private void bComplete_Click(object sender, EventArgs e)
         {
-            textReadWrite.CreateQuestionObjects(textReadWrite.readTextFile(fileIO.TxtPath));
+            textReadWrite.CreateQuestionObjects(textReadWrite.ReadTextFile(fileIO.TxtPath));
             jsonReadWrite.writeQuestions(textReadWrite.questionObjectList, fileIO.JsonQuestions);
             MessageBox.Show("Operation Complete");
             Application.Exit();

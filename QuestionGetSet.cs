@@ -13,7 +13,7 @@ namespace NavyPQS
         TextReadWrite TextReadWrite = new TextReadWrite();      
         public void GetAndStoreTextQuestions(string txtFilePath)
         {
-            var questionsText = TextReadWrite.readTextFile(txtFilePath);
+            var questionsText = TextReadWrite.ReadTextFile(txtFilePath);
             TextReadWrite.CreateQuestionObjects(questionsText);
         }
         public void StoreQuestionObjectsToJson(string jsonFilePath)
